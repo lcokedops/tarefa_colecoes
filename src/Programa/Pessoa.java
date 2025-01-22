@@ -3,10 +3,12 @@ package Programa;
 
 public class Pessoa implements Comparable<Pessoa>{
 	private String nome;
+	private String sexo;
 
-	public Pessoa(String nome) {
+	public Pessoa(String nome, String sexo) {
 		super();
 		this.nome = nome;
+		this.sexo = sexo;
 	}
 
 	public String getNome() {
@@ -17,9 +19,17 @@ public class Pessoa implements Comparable<Pessoa>{
 		this.nome = nome;
 	}
 
+	public String getSexo() {
+		return sexo;
+	}
+
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
+	}
+
 	@Override
 	public String toString() {
-		return nome;
+		return nome + " - " + sexo;
 	}
 
 	@Override
